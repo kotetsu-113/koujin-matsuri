@@ -1,0 +1,161 @@
+/* Custom CSS for Koujin Matsuri */
+
+/* Text shadow utility */
+.text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* Smooth scrolling for navigation links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navigation transitions */
+.nav-link {
+    transition: all 0.3s ease;
+}
+
+/* Modal styles */
+.modal {
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+}
+
+.modal-content {
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Hero section background overlay */
+.hero-overlay {
+    background: linear-gradient(45deg, rgba(139, 0, 0, 0.8), rgba(139, 0, 0, 0.6));
+}
+
+/* Hover effects for cards */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Button animations */
+.btn-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8B0000;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6B0000;
+}
+
+/* Loading animation for images */
+img {
+    transition: opacity 0.3s ease;
+}
+
+img:not([src]) {
+    opacity: 0;
+}
+
+/* Focus styles for accessibility */
+.nav-link:focus,
+button:focus,
+a:focus {
+    outline: 2px solid #DAA520;
+    outline-offset: 2px;
+}
+
+/* Mobile menu animation */
+.mobile-menu {
+    transition: all 0.3s ease;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.mobile-menu.show {
+    max-height: 300px;
+}
+
+/* Japanese font optimization */
+body {
+    font-feature-settings: "palt" 1;
+    text-rendering: optimizeSpeed;
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    .bg-primary {
+        background: white !important;
+        color: black !important;
+    }
+}
+
+/* Responsive image handling */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .text-gray-600 {
+        color: #000 !important;
+    }
+    
+    .text-gray-700 {
+        color: #000 !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
