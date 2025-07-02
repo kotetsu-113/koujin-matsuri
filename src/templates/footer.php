@@ -19,7 +19,8 @@
                 <div>
                     <h3 class="text-lg font-semibold mb-4">お問い合わせ</h3>
                     <div class="text-gray-300 space-y-2">
-                        <p>渡邉邸 工人まつり実行委員会</p>
+                        <p><?= h($config['organizer']) ?></p>
+                        <p><?= h($config['executive_committee']) ?></p>
                         <p>
                             <a href="mailto:<?= h($config['contact_email']) ?>" class="hover:text-white transition-colors">
                                 <?= h($config['contact_email']) ?>
@@ -53,7 +54,7 @@
             
             <!-- Copyright -->
             <div class="mt-8 pt-8 border-t border-gray-700 text-center text-gray-400">
-                <p>&copy; <?= getCurrentYear() ?> <?= h($config['event_title']) ?>実行委員会. All rights reserved.</p>
+                <p>&copy; <?= getCurrentYear() ?> <?= h($config['event_title']) ?> / <?= h($config['organizer']) ?> <?= h($config['executive_committee']) ?>. All rights reserved.</p>
             </div>
         </div>
     </footer>

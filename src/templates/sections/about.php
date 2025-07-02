@@ -10,22 +10,22 @@
             <div class="space-y-6">
                 <h3 class="text-2xl font-semibold text-gray-900">重要文化財 渡邉邸で開催する特別なイベント</h3>
                 <p class="text-gray-700 leading-relaxed">
-                    渡邉邸 工人まつりは、新潟県関川村の重要文化財である渡邉邸を舞台に開催される、職人と作家による手作り作品の祭典です。
-                    歴史ある建物の美しい空間で、伝統工芸から現代アートまで、様々なジャンルの作品が一堂に会します。
+                    <?= h($config['event_title']) ?>は、新潟県関川村の重要文化財である渡邉邸を舞台に開催される、職人と作家による手作り作品の祭典です。
+                    歴史ある建物の美しい空間で、クラフト作品、農産物、食品など様々なジャンルの出店者が一堂に会します。
                 </p>
                 <p class="text-gray-700 leading-relaxed">
-                    来場者の皆様には、作品の購入だけでなく、職人や作家の技術を間近で見学できる実演やワークショップもお楽しみいただけます。
+                    来場者の皆様には、作品の購入だけでなく、職人や作家の技術を間近で見学できるワークショップや、音楽などのパフォーマンスもお楽しみいただけます。
                     日本の美しい伝統文化と現代の創造性が融合した、特別な時間をお過ごしください。
                 </p>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-8">
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <h4 class="font-semibold text-primary mb-2">開催規模</h4>
-                        <p class="text-gray-600">約50組の出店者<br>年間来場者数 約3,000名</p>
+                        <p class="text-gray-600">約<?= $config['booth_count'] ?>店舗の出店者<br>喫茶コーナー・パフォーマンス</p>
                     </div>
                     <div class="bg-white p-6 rounded-lg shadow-md">
                         <h4 class="font-semibold text-primary mb-2">出店ジャンル</h4>
-                        <p class="text-gray-600">陶芸・木工・金工・染織<br>革細工・ガラス工芸など</p>
+                        <p class="text-gray-600">クラフト・ワークショップ<br>農産物・食品・音楽など</p>
                     </div>
                 </div>
             </div>
@@ -43,9 +43,10 @@
                     <h4 class="font-semibold mb-3">出店者特典</h4>
                     <ul class="space-y-2 text-sm">
                         <li>✓ 歴史ある重要文化財での出店機会</li>
-                        <li>✓ 実演・ワークショップスペースの提供</li>
-                        <li>✓ SNS・ウェブサイトでの作家紹介</li>
-                        <li>✓ 駐車場・搬入サポート完備</li>
+                        <li>✓ ワークショップ・パフォーマンススペース</li>
+                        <li>✓ 売上手数料はいっさいいただきません</li>
+                        <li>✓ スタッフ2名まで入場無料</li>
+                        <li>✓ 前日からの搬入・準備可能</li>
                     </ul>
                 </div>
             </div>

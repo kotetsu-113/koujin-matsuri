@@ -19,7 +19,8 @@ function formatDateJapanese(string $date): string
  */
 function getOgImageUrl(array $config): string
 {
-    return 'https://kotetsu.tech/koujin-matsuri' . $config['hero_img'];
+    $ogpImage = isset($config['ogp_img']) ? $config['ogp_img'] : $config['hero_img'];
+    return 'https://kotetsu.tech/koujin-matsuri' . $ogpImage;
 }
 
 /**

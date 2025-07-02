@@ -18,8 +18,9 @@
                     <h4 class="font-semibold mb-3">📝 申込み前にご確認ください</h4>
                     <ul class="space-y-2 text-sm">
                         <li>• 出店要項をよくお読みください</li>
-                        <li>• 作品写真（3点以上）をご準備ください</li>
-                        <li>• 申込み締切：<?= h($config['event_year']) ?>年10月15日</li>
+                        <li>• 出店申込み書の提出が必要です</li>
+                        <li>• 審査があります（先着順・政治宗教団体不可）</li>
+                        <li>• 食品販売は食品衛生法をクリアしていること</li>
                     </ul>
                 </div>
                 
@@ -33,15 +34,15 @@
                 </div>
                 
                 <div class="mt-8 p-6 bg-white rounded-lg border-2 border-gray-200">
-                    <h4 class="font-semibold text-gray-900 mb-3">📋 必要な情報</h4>
+                    <h4 class="font-semibold text-gray-900 mb-3">📋 申込み必要事項</h4>
                     <ul class="space-y-2 text-sm text-gray-700">
-                        <li>• お名前・作家名・団体名</li>
-                        <li>• ご連絡先（電話・メール・住所）</li>
-                        <li>• 作品ジャンル・制作歴</li>
-                        <li>• 作品写真（3点以上）</li>
-                        <li>• 出店希望ブース（屋内・屋外）</li>
-                        <li>• 実演・ワークショップ実施希望</li>
-                        <li>• 過去の出店・展示経験</li>
+                        <li>• お名前・連絡先（電話・メール・住所）</li>
+                        <li>• 出店内容・ジャンル詳細</li>
+                        <li>• 出店希望日（両日・1日のみ）</li>
+                        <li>• ワークショップ・パフォーマンス実施希望</li>
+                        <li>• 食品販売の場合は許可証等の詳細</li>
+                        <li>• スタッフ人数（2名まで無料）</li>
+                        <li>• 搬入時間の希望（前日午後から相談可）</li>
                     </ul>
                 </div>
             </div>
@@ -52,7 +53,8 @@
                     <h3 class="text-xl font-semibold mb-6">お問い合わせ</h3>
                     <div class="space-y-4">
                         <div>
-                            <h4 class="font-semibold mb-2">渡邉邸 工人まつり実行委員会</h4>
+                            <h4 class="font-semibold mb-2"><?= h($config['organizer']) ?></h4>
+                            <p class="text-sm text-gray-200"><?= h($config['executive_committee']) ?></p>
                             <p class="text-sm text-gray-200">出店に関するご質問・ご相談はお気軽にどうぞ</p>
                         </div>
                         <div class="space-y-3">
@@ -64,11 +66,9 @@
                                     <?= h($config['contact_email']) ?>
                                 </a>
                             </div>
-                            <div class="flex items-center space-x-3">
-                                <svg class="w-5 h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                <span>平日 9:00-17:00</span>
+                            <div class="text-sm text-gray-200">
+                                <p>説明会・会場視察を予定しています（日時未定）</p>
+                                <p>できるだけご出席をお願いします</p>
                             </div>
                         </div>
                     </div>
@@ -78,30 +78,32 @@
                     <h3 class="text-lg font-semibold text-gray-900 mb-4">よくある質問</h3>
                     <div class="space-y-4">
                         <div>
-                            <h4 class="font-medium text-gray-900 mb-1">Q. 初回参加でも申し込みできますか？</h4>
-                            <p class="text-sm text-gray-600">A. はい、初回参加の方も大歓迎です。作品審査を経て出店いただけます。</p>
+                            <h4 class="font-medium text-gray-900 mb-1">Q. 1日だけの参加は可能ですか？</h4>
+                            <p class="text-sm text-gray-600">A. はい、1日だけの出店も可能です。ただし出店日のブースには限りがあります。</p>
                         </div>
                         <div>
-                            <h4 class="font-medium text-gray-900 mb-1">Q. 雨天時の開催はどうなりますか？</h4>
-                            <p class="text-sm text-gray-600">A. 雨天決行です。屋外ブースの方はテント等をご準備ください。</p>
+                            <h4 class="font-medium text-gray-900 mb-1">Q. 出店料金はどのくらいかかりますか？</h4>
+                            <p class="text-sm text-gray-600">A. 出店広告費<?= number_format($config['booth_fees']['advertising']) ?>円+出店料<?= number_format($config['booth_fees']['booth_fee']) ?>円です。ただし前売券販売額と同額を割引いたします。</p>
                         </div>
                         <div>
-                            <h4 class="font-medium text-gray-900 mb-1">Q. 搬入・搬出の時間は？</h4>
-                            <p class="text-sm text-gray-600">A. 搬入：前日16:00-18:00、当日7:00-8:30 / 搬出：当日16:30-18:00</p>
+                            <h4 class="font-medium text-gray-900 mb-1">Q. 搬入・準備はいつからできますか？</h4>
+                            <p class="text-sm text-gray-600">A. 前日午後から可能です。時間は相談の上決定いたします。</p>
                         </div>
                         <div>
-                            <h4 class="font-medium text-gray-900 mb-1">Q. 出店料金の支払い方法は？</h4>
-                            <p class="text-sm text-gray-600">A. 採用通知後、指定口座へのお振込みとなります。</p>
+                            <h4 class="font-medium text-gray-900 mb-1">Q. 備品の貸し出しはありますか？</h4>
+                            <p class="text-sm text-gray-600">A. 申し訳ございませんが、渡邉邸にはお貸しできる備品・機材等はございません。</p>
                         </div>
                     </div>
                 </div>
                 
                 <div class="bg-yellow-50 border-l-4 border-secondary p-6 rounded-r-lg">
-                    <h4 class="font-semibold text-gray-900 mb-3">🌟 出店者の声</h4>
-                    <blockquote class="text-sm text-gray-700 italic">
-                        「歴史ある建物での出店は特別な体験でした。お客様との距離も近く、作品について直接お話しできるのが嬉しいです。」
-                        <footer class="text-xs text-gray-500 mt-2">- 陶芸作家 A様</footer>
-                    </blockquote>
+                    <h4 class="font-semibold text-gray-900 mb-3">⚠️ 重要なお知らせ</h4>
+                    <ul class="text-sm text-gray-700 space-y-2">
+                        <li>• 出店許可は先着順ですが審査があります</li>
+                        <li>• 政治、宗教等の団体での出店はできません</li>
+                        <li>• 建物にキズや汚れをつけないよう十分配慮してください</li>
+                        <li>• 説明会・会場視察への参加をお願いします</li>
+                    </ul>
                 </div>
             </div>
         </div>
